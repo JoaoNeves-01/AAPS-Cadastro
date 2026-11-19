@@ -10,11 +10,9 @@ associação e propõe a solução desejada.
 
 ## Sobre o projeto de extensão
 
-- **Instituição:** [nome da faculdade]
-- **Curso:** [nome do curso]
-- **Disciplina / atividade de extensão:** [nome da disciplina]
+- **Instituição:** UNISO
+- **Curso:** Ciencia de Dados e IA
 - **Autor:** João Vitor Neves
-- **Orientador(a):** [nome]
 - **Organização atendida:** AAPS, Associação Anjos e Protetores de Sorocaba
 
 O objetivo é aplicar o conteúdo do curso em uma demanda real da
