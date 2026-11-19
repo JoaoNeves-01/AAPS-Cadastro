@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel geral · AAPS Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="AAPS Cadastro – ir para o painel">
+        <span class="brand-mark"><svg viewBox="0 0 64 64" aria-hidden="true">
+            <ellipse cx="32" cy="43" rx="14" ry="11" />
+            <ellipse cx="13" cy="29" rx="6" ry="8" transform="rotate(-18 13 29)" />
+            <ellipse cx="25" cy="17" rx="6" ry="9" transform="rotate(-6 25 17)" />
+            <ellipse cx="39" cy="17" rx="6" ry="9" transform="rotate(6 39 17)" />
+            <ellipse cx="51" cy="29" rx="6" ry="8" transform="rotate(18 51 29)" />
+          </svg></span>
+        AAPS Cadastro
+      </a>
+      <nav class="nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Painel</a></li>
+          <li><a href="resgate.html">Resgates</a></li>
+          <li><a href="prontuario.html">Animais e prontuários</a></li>
+          <li><a href="adotante.html">Adotantes e adoções</a></li>
+          <li><a href="doacoes.html">Doações</a></li>
+        </ul>
+      </nav>
+      <div class="user-box">
+        <strong>Fernanda Lima</strong>
+        Perfil: Administrativo
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div>
+          <h1>Painel geral</h1>
+          <p>Visão em tempo real da situação dos animais</p>
+        </div>
+        <div class="search">
+          <label class="sr-only" for="busca">Buscar por nome, ID ou adotante</label>
+          <input id="busca" type="search" placeholder="Buscar por nome, ID ou adotante...">
+        </div>
+      </header>
+      <main class="content" id="conteudo">
+
+        <section aria-label="Resumo por situação">
+          <div class="grid-stats">
+            <article class="card stat">
+              <p class="label">Resgatados</p>
+              <p class="value">6</p>
+              <p class="note">+2 esta semana</p>
+            </article>
+            <article class="card stat">
+              <p class="label">Em tratamento</p>
+              <p class="value">14</p>
+              <p class="note muted">3 aguardam exame</p>
+            </article>
+            <article class="card stat">
+              <p class="label">Aptos para adoção</p>
+              <p class="value">21</p>
+              <p class="note">5 com ficha publicada</p>
+            </article>
+            <article class="card stat">
+              <p class="label">Em lar temporário</p>
+              <p class="value">17</p>
+              <p class="note warn">2 sem check-in há 7 dias</p>
+            </article>
+            <article class="card stat">
+              <p class="label">Adotados no mês</p>
+              <p class="value">9</p>
+              <p class="note">+3 vs. mês anterior</p>
+            </article>
+          </div>
+        </section>
+
+        <div class="grid-main">
+          <section class="card" aria-labelledby="t-ultimos">
+            <h2 id="t-ultimos">Últimos resgates</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Animal</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Local do resgate</th>
+                    <th scope="col">Data</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>AAPS-0152</strong></td>
+                    <td>Caramelo (sem nome)</td>
+                    <td><span class="badge">Resgatado</span></td>
+                    <td>Av. Itavuvu, Sorocaba</td>
+                    <td class="nowrap">03/11</td>
+                  </tr>
+                  <tr>
+                    <td><strong>AAPS-0151</strong></td>
+                    <td>Mel</td>
+                    <td><span class="badge badge-tratamento">Em tratamento</span></td>
+                    <td>Jd. Vergueiro</td>
+                    <td class="nowrap">02/11</td>
+                  </tr>
+                  <tr>
+                    <td><strong>AAPS-0150</strong></td>
+                    <td>Thor</td>
+                    <td><span class="badge badge-tratamento">Em tratamento</span></td>
+                    <td>Pq. São Bento</td>
+                    <td class="nowrap">31/10</td>
+                  </tr>
+                  <tr>
+                    <td><strong>AAPS-0149</strong></td>
+                    <td>Pretinha</td>
+                    <td><span class="badge badge-apto">Apto p/ adoção</span></td>
+                    <td>Votorantim (divisa)</td>
+                    <td class="nowrap">28/10</td>
+                  </tr>
+                  <tr>
+                    <td><strong>AAPS-0148</strong></td>
+                    <td>Bidu</td>
+                    <td><span class="badge badge-lar">Em lar temporário</span></td>
+                    <td>Éden</td>
+                    <td class="nowrap">25/10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="card" aria-labelledby="t-situacao">
+            <h2 id="t-situacao">Situação dos animais</h2>
+            <div class="status-bar" role="img"
+              aria-label="Distribuição: 6 resgatados, 14 em tratamento, 21 aptos, 17 em lar temporário, 9 adotados no mês">
+              <span style="flex:6;background:var(--c-resgatado)"></span>
+              <span style="flex:14;background:var(--c-tratamento)"></span>
+              <span style="flex:21;background:var(--c-apto)"></span>
+              <span style="flex:17;background:var(--c-lar)"></span>
+              <span style="flex:9;background:var(--c-adotado)"></span>
+            </div>
+            <ul class="legend">
+              <li style="--dot:var(--c-resgatado)">Resgatado — 6</li>
+              <li style="--dot:var(--c-tratamento)">Em tratamento — 14</li>
+              <li style="--dot:var(--c-apto)">Apto para adoção — 21</li>
+              <li style="--dot:var(--c-lar)">Lar temporário — 17</li>
+              <li style="--dot:var(--c-adotado)">Adotado (mês) — 9</li>
+            </ul>
+            <h3 class="subtitle">Alertas</h3>
+            <ul class="alerts">
+              <li class="alert alert-warn">2 lares temporários sem check-in</li>
+              <li class="alert alert-danger">1 adotante com devolução anterior</li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>

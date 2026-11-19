@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triagem de adotante · AAPS Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="AAPS Cadastro – ir para o painel">
+        <span class="brand-mark"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="43" rx="14" ry="11"/><ellipse cx="13" cy="29" rx="6" ry="8" transform="rotate(-18 13 29)"/><ellipse cx="25" cy="17" rx="6" ry="9" transform="rotate(-6 25 17)"/><ellipse cx="39" cy="17" rx="6" ry="9" transform="rotate(6 39 17)"/><ellipse cx="51" cy="29" rx="6" ry="8" transform="rotate(18 51 29)"/></svg></span>
+        AAPS Cadastro
+      </a>
+      <nav class="nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Painel</a></li>
+        <li><a href="resgate.html">Resgates</a></li>
+        <li><a href="prontuario.html">Animais e prontuários</a></li>
+        <li><a href="adotante.html" aria-current="page">Adotantes e adoções</a></li>
+        <li><a href="#">Lares temporários</a></li>
+        <li><a href="doacoes.html">Doações</a></li>
+        <li><a href="#">Relatórios</a></li>
+      </ul>
+      </nav>
+      <div class="user-box">
+        <strong>Fernanda Lima</strong>
+        Perfil: Administrativo
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div>
+          <h1>Triagem de adotante</h1>
+          <p>Cadastro e checagem automática de histórico</p>
+        </div>
+      </header>
+      <main class="content" id="conteudo">
+
+        <form action="#" method="post">
+          <div class="grid-form">
+            <section class="card" aria-labelledby="t-cad">
+              <h2 id="t-cad">Cadastro do interessado</h2>
+              <div class="form-grid">
+                <div class="field full"><label for="nome">Nome completo</label><input id="nome" type="text" value="Roberto Almeida Souza"></div>
+                <div class="field"><label for="cpf">CPF</label><input id="cpf" type="text" value="***.482.917-**" inputmode="numeric"></div>
+                <div class="field"><label for="tel">Telefone / WhatsApp</label><input id="tel" type="tel" value="(15) 9 9xxx-4821"></div>
+                <div class="field full"><label for="end">Endereço</label><input id="end" type="text" value="Rua das Palmeiras, 215 — Jd. Simus, Sorocaba/SP"></div>
+                <div class="field">
+                  <label for="moradia">Tipo de moradia</label>
+                  <select id="moradia"><option selected>Casa com quintal murado</option><option>Casa sem quintal</option><option>Apartamento</option><option>Chácara / sítio</option></select>
+                </div>
+                <div class="field"><label for="animais">Já teve animais?</label><input id="animais" type="text" value="Sim — 2 cães"></div>
+                <div class="field full"><label for="interesse">Animal de interesse</label><input id="interesse" type="text" value="Pretinha · AAPS-0149 · Apto para adoção"></div>
+                <div class="field full">
+                  <label class="check" for="lgpd"><input id="lgpd" type="checkbox" checked> O interessado autorizou o tratamento dos dados para fins de adoção (LGPD).</label>
+                </div>
+              </div>
+            </section>
+
+            <div class="stack">
+              <section class="card" aria-labelledby="t-check">
+                <h2 id="t-check">Checagem automática de histórico</h2>
+                <div class="check-row"><span>Cadastro duplicado</span><span class="badge badge-apto">Não encontrado</span></div>
+                <div class="check-row"><span>Adoções anteriores</span><span class="badge badge-neutro">1 registro</span></div>
+                <div class="check-row"><span>Adoção devolvida</span><span class="badge badge-danger">1 ocorrência</span></div>
+                <p class="callout" role="alert"><strong>Atenção:</strong> animal devolvido em 03/2025 (motivo registrado: mudança de endereço). A aprovação exige análise e justificativa do responsável.</p>
+              </section>
+
+              <section class="card" aria-labelledby="t-dec">
+                <h2 id="t-dec">Decisão</h2>
+                <div class="field" style="margin-bottom:16px">
+                  <label for="just">Justificativa do responsável</label>
+                  <textarea id="just" placeholder="Descreva a análise realizada..."></textarea>
+                </div>
+                <div class="actions">
+                  <button class="btn btn-primary" type="submit">Aprovar adoção</button>
+                  <button class="btn" type="button">Reprovar</button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doações e campanhas · AAPS Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="AAPS Cadastro – ir para o painel">
+        <span class="brand-mark"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="43" rx="14" ry="11"/><ellipse cx="13" cy="29" rx="6" ry="8" transform="rotate(-18 13 29)"/><ellipse cx="25" cy="17" rx="6" ry="9" transform="rotate(-6 25 17)"/><ellipse cx="39" cy="17" rx="6" ry="9" transform="rotate(6 39 17)"/><ellipse cx="51" cy="29" rx="6" ry="8" transform="rotate(18 51 29)"/></svg></span>
+        AAPS Cadastro
+      </a>
+      <nav class="nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Painel</a></li>
+        <li><a href="resgate.html">Resgates</a></li>
+        <li><a href="prontuario.html">Animais e prontuários</a></li>
+        <li><a href="adotante.html">Adotantes e adoções</a></li>
+        <li><a href="#">Lares temporários</a></li>
+        <li><a href="doacoes.html" aria-current="page">Doações</a></li>
+        <li><a href="#">Relatórios</a></li>
+      </ul>
+      </nav>
+      <div class="user-box">
+        <strong>Fernanda Lima</strong>
+        Perfil: Administrativo
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div>
+          <h1>Doações e campanhas</h1>
+          <p>Origem e destino dos recursos</p>
+        </div>
+      <div class="search">
+        <label class="sr-only" for="busca">Buscar por nome, ID ou adotante</label>
+        <input id="busca" type="search" placeholder="Buscar por nome, ID ou adotante...">
+      </div>
+      </header>
+      <main class="content" id="conteudo">
+
+        <section aria-label="Campanhas em andamento">
+          <div class="grid-3">
+            <article class="card campaign">
+              <p class="kind">Campanha</p><p class="name">Castração solidária</p>
+              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="72" aria-label="Castração solidária: 72%" style="--p:72%;--bar:var(--c-lar)"><span></span></div>
+              <p class="meta">R$ 3.600 de R$ 5.000 · 72%</p>
+            </article>
+            <article class="card campaign">
+              <p class="kind">Campanha</p><p class="name">Ração para o inverno</p>
+              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="45" aria-label="Ração para o inverno: 45%" style="--p:45%;--bar:var(--c-apto)"><span></span></div>
+              <p class="meta">180 kg de 400 kg · 45%</p>
+            </article>
+            <article class="card campaign">
+              <p class="kind">Doação direcionada</p><p class="name">Tratamento do Thor (AAPS-0150)</p>
+              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90" aria-label="Tratamento do Thor: 90%" style="--p:90%;--bar:var(--c-tratamento)"><span></span></div>
+              <p class="meta">R$ 900 de R$ 1.000 · 90%</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="t-reg">
+          <div class="card-head">
+            <h2 id="t-reg">Doações registradas</h2>
+            <button class="btn btn-primary" type="button">+ Registrar doação</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Data</th><th scope="col">Doador</th><th scope="col">Tipo</th><th scope="col">Valor / quantidade</th><th scope="col">Vinculada a</th></tr></thead>
+              <tbody>
+                <tr><td class="nowrap">04/11</td><td>Marina Costa</td><td>Financeira</td><td class="nowrap">R$ 150,00</td><td><span class="badge badge-lar">Castração solidária</span></td></tr>
+                <tr><td class="nowrap">03/11</td><td>Pet Shop Amigo Fiel</td><td>Insumo (ração)</td><td class="nowrap">40 kg</td><td><span class="badge badge-apto">Ração para o inverno</span></td></tr>
+                <tr><td class="nowrap">02/11</td><td>Doador anônimo</td><td>Financeira</td><td class="nowrap">R$ 300,00</td><td><span class="badge badge-tratamento">Thor · AAPS-0150</span></td></tr>
+                <tr><td class="nowrap">01/11</td><td>Clínica VetVida</td><td>Insumo (vermífugo)</td><td class="nowrap">30 doses</td><td><span class="badge badge-neutro">Doação geral</span></td></tr>
+                <tr><td class="nowrap">30/10</td><td>João Pereira</td><td>Financeira</td><td class="nowrap">R$ 80,00</td><td><span class="badge badge-lar">Castração solidária</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

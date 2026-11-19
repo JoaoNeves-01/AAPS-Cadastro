@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Novo resgate · AAPS Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="AAPS Cadastro – ir para o painel">
+        <span class="brand-mark"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="43" rx="14" ry="11"/><ellipse cx="13" cy="29" rx="6" ry="8" transform="rotate(-18 13 29)"/><ellipse cx="25" cy="17" rx="6" ry="9" transform="rotate(-6 25 17)"/><ellipse cx="39" cy="17" rx="6" ry="9" transform="rotate(6 39 17)"/><ellipse cx="51" cy="29" rx="6" ry="8" transform="rotate(18 51 29)"/></svg></span>
+        AAPS Cadastro
+      </a>
+      <nav class="nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Painel</a></li>
+        <li><a href="resgate.html" aria-current="page">Resgates</a></li>
+        <li><a href="prontuario.html">Animais e prontuários</a></li>
+        <li><a href="adotante.html">Adotantes e adoções</a></li>
+        <li><a href="#">Lares temporários</a></li>
+        <li><a href="doacoes.html">Doações</a></li>
+        <li><a href="#">Relatórios</a></li>
+      </ul>
+      </nav>
+      <div class="user-box">
+        <strong>Fernanda Lima</strong>
+        Perfil: Administrativo
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div>
+          <h1>Novo resgate</h1>
+          <p>Ficha de resgate digital (tablet/celular)</p>
+        </div>
+      </header>
+      <main class="content" id="conteudo">
+
+        <div class="bar-info">
+          <span class="pill-offline">Modo offline — 2 registros aguardando sincronização</span>
+          <span>ID gerado ao salvar</span>
+        </div>
+
+        <form action="#" method="post">
+          <div class="grid-form">
+            <section class="card" aria-labelledby="t-dados">
+              <h2 id="t-dados">Dados do resgate</h2>
+              <div class="form-grid">
+                <div class="field"><label for="datahora">Data e hora</label><input id="datahora" type="text" value="05/11/2026 — 09:42 (automático)" readonly></div>
+                <div class="field"><label for="responsavel">Responsável pelo resgate</label><input id="responsavel" type="text" value="Carlos Andrade"></div>
+                <div class="field full"><label for="local">Local do resgate</label><input id="local" type="text" value="Av. Itavuvu, altura do nº 4200 — Sorocaba/SP"></div>
+                <div class="field">
+                  <label for="porte">Porte</label>
+                  <select id="porte"><option>Pequeno</option><option selected>Médio</option><option>Grande</option></select>
+                </div>
+                <div class="field"><label for="sexo">Sexo / idade aproximada</label><input id="sexo" type="text" value="Macho — 2 a 3 anos"></div>
+                <div class="field full"><label for="condicao">Condição inicial</label><textarea id="condicao">Animal debilitado, desidratado, com ferimento leve na pata dianteira. Dócil.</textarea></div>
+                <div class="field">
+                  <label for="situacao">Situação</label>
+                  <select id="situacao"><option selected>Necessita atendimento veterinário</option><option>Estável</option><option>Em observação</option></select>
+                </div>
+                <div class="field"><label for="nome">Nome (se houver)</label><input id="nome" type="text" placeholder="Sem nome"></div>
+              </div>
+            </section>
+
+            <div class="stack">
+              <section class="card" aria-labelledby="t-foto">
+                <h2 id="t-foto">Foto do animal</h2>
+                <div class="photo photo-lg" role="img" aria-label="Espaço reservado para a foto do animal"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="43" rx="14" ry="11"/><ellipse cx="13" cy="29" rx="6" ry="8" transform="rotate(-18 13 29)"/><ellipse cx="25" cy="17" rx="6" ry="9" transform="rotate(-6 25 17)"/><ellipse cx="39" cy="17" rx="6" ry="9" transform="rotate(6 39 17)"/><ellipse cx="51" cy="29" rx="6" ry="8" transform="rotate(18 51 29)"/></svg></div>
+                <div class="actions">
+                  <button class="btn btn-sm" type="button">Tirar foto</button>
+                  <button class="btn btn-sm" type="button">Galeria</button>
+                </div>
+              </section>
+
+              <section class="card" aria-labelledby="t-gps">
+                <h2 id="t-gps">Localização (GPS automático)</h2>
+                <div class="map" role="img" aria-label="Mapa com a localização marcada do resgate"><span class="map-pin"></span></div>
+              </section>
+            </div>
+          </div>
+
+          <div class="actions end" style="margin-top:18px">
+            <button class="btn" type="button">Cancelar</button>
+            <button class="btn btn-primary" type="submit">Salvar resgate e gerar ID</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

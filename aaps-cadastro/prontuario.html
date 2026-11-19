@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prontuário do animal · AAPS Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="AAPS Cadastro – ir para o painel">
+        <span class="brand-mark"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="43" rx="14" ry="11"/><ellipse cx="13" cy="29" rx="6" ry="8" transform="rotate(-18 13 29)"/><ellipse cx="25" cy="17" rx="6" ry="9" transform="rotate(-6 25 17)"/><ellipse cx="39" cy="17" rx="6" ry="9" transform="rotate(6 39 17)"/><ellipse cx="51" cy="29" rx="6" ry="8" transform="rotate(18 51 29)"/></svg></span>
+        AAPS Cadastro
+      </a>
+      <nav class="nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Painel</a></li>
+        <li><a href="resgate.html">Resgates</a></li>
+        <li><a href="prontuario.html" aria-current="page">Animais e prontuários</a></li>
+        <li><a href="adotante.html">Adotantes e adoções</a></li>
+        <li><a href="#">Lares temporários</a></li>
+        <li><a href="doacoes.html">Doações</a></li>
+        <li><a href="#">Relatórios</a></li>
+      </ul>
+      </nav>
+      <div class="user-box">
+        <strong>Fernanda Lima</strong>
+        Perfil: Administrativo
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div>
+          <h1>Prontuário do animal</h1>
+          <p>Histórico de saúde e status</p>
+        </div>
+      <div class="search">
+        <label class="sr-only" for="busca">Buscar por nome, ID ou adotante</label>
+        <input id="busca" type="search" placeholder="Buscar por nome, ID ou adotante...">
+      </div>
+      </header>
+      <main class="content" id="conteudo">
+
+        <section class="card" aria-label="Identificação do animal">
+          <div class="animal-head">
+            <div class="photo photo-sm" role="img" aria-label="Foto do animal"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="43" rx="14" ry="11"/><ellipse cx="13" cy="29" rx="6" ry="8" transform="rotate(-18 13 29)"/><ellipse cx="25" cy="17" rx="6" ry="9" transform="rotate(-6 25 17)"/><ellipse cx="39" cy="17" rx="6" ry="9" transform="rotate(6 39 17)"/><ellipse cx="51" cy="29" rx="6" ry="8" transform="rotate(18 51 29)"/></svg></div>
+            <div class="animal-info">
+              <h2>Thor <span>· AAPS-0150</span></h2>
+              <p>Macho · Porte grande · ~3 anos · Resgatado em 31/10/2026 (Pq. São Bento)</p>
+              <div class="badges">
+                <span class="badge badge-tratamento">Em tratamento</span>
+                <span class="badge badge-neutro">Não castrado</span>
+                <span class="badge badge-apto">Vacinação em dia</span>
+              </div>
+            </div>
+            <div class="weight"><p class="label">Peso atual</p><p class="value">24,8 kg</p></div>
+          </div>
+        </section>
+
+        <div class="tabs">
+          <input type="radio" name="aba" id="tab-saude" checked>
+          <input type="radio" name="aba" id="tab-resumo">
+          <input type="radio" name="aba" id="tab-historico">
+          <input type="radio" name="aba" id="tab-lar">
+          <input type="radio" name="aba" id="tab-docs">
+
+          <div class="tab-list">
+            <label for="tab-saude">Saúde</label>
+            <label for="tab-resumo">Resumo</label>
+            <label for="tab-historico">Histórico de status</label>
+            <label for="tab-lar">Lar temporário</label>
+            <label for="tab-docs">Documentos</label>
+          </div>
+
+          <div class="tab-panel panel-saude">
+            <div class="grid-main">
+              <section class="card" aria-labelledby="t-vac">
+                <h2 id="t-vac">Vacinas e exames</h2>
+                <div class="table-wrap">
+                  <table>
+                    <thead><tr><th scope="col">Item</th><th scope="col">Data</th><th scope="col">Responsável</th><th scope="col">Situação</th></tr></thead>
+                    <tbody>
+                      <tr><td>V10 (1ª dose)</td><td class="nowrap">02/11/2026</td><td>Dra. Paula R.</td><td><span class="badge badge-apto">Aplicada</span></td></tr>
+                      <tr><td>Antirrábica</td><td class="nowrap">02/11/2026</td><td>Dra. Paula R.</td><td><span class="badge badge-apto">Aplicada</span></td></tr>
+                      <tr><td>Teste de leishmaniose</td><td class="nowrap">03/11/2026</td><td>Clínica parceira</td><td><span class="badge badge-apto">Negativo</span></td></tr>
+                      <tr><td>Hemograma</td><td class="nowrap">06/11/2026</td><td>Clínica parceira</td><td><span class="badge badge-lar">Agendado</span></td></tr>
+                      <tr><td>Castração</td><td>—</td><td>—</td><td><span class="badge badge-neutro">Pendente</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div style="margin-top:16px"><button class="btn btn-primary" type="button">+ Novo registro</button></div>
+              </section>
+
+              <section class="card" aria-labelledby="t-linha">
+                <h2 id="t-linha">Linha do tempo</h2>
+                <ul class="timeline">
+                  <li><strong>03/11</strong> · Teste de leishmaniose registrado</li>
+                  <li><strong>02/11</strong> · Vacinas aplicadas · status: <span class="badge badge-tratamento">Em tratamento</span></li>
+                  <li><strong>01/11</strong> · Chegada à sede e avaliação inicial</li>
+                  <li><strong>31/10</strong> · Resgate registrado por Carlos Andrade</li>
+                </ul>
+                <div class="field">
+                  <label for="obs">Observações</label>
+                  <textarea id="obs">Ferimento na pata em cicatrização. Aguardando hemograma antes da castração.</textarea>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="tab-panel panel-resumo">
+            <section class="card" aria-labelledby="t-resumo">
+              <h2 id="t-resumo">Resumo do animal</h2>
+              <dl class="facts">
+                <div><dt>ID</dt><dd>AAPS-0150</dd></div>
+                <div><dt>Situação atual</dt><dd>Em tratamento</dd></div>
+                <div><dt>Local do resgate</dt><dd>Pq. São Bento, Sorocaba/SP</dd></div>
+                <div><dt>Resgatado por</dt><dd>Carlos Andrade</dd></div>
+                <div><dt>Condição inicial</dt><dd>Debilitado, com ferimento leve na pata</dd></div>
+                <div><dt>Próximo passo</dt><dd>Hemograma em 06/11/2026</dd></div>
+              </dl>
+            </section>
+          </div>
+
+          <div class="tab-panel panel-historico">
+            <section class="card" aria-labelledby="t-hist">
+              <h2 id="t-hist">Histórico de status</h2>
+              <ul class="timeline">
+                <li><strong>02/11</strong> · <span class="badge">Resgatado</span> → <span class="badge badge-tratamento">Em tratamento</span></li>
+                <li><strong>31/10</strong> · Cadastro criado como <span class="badge">Resgatado</span></li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="tab-panel panel-lar">
+            <section class="card" aria-labelledby="t-lar">
+              <h2 id="t-lar">Lar temporário</h2>
+              <p>Thor ainda está na sede e não foi vinculado a nenhum voluntário.</p>
+              <div style="margin-top:14px"><button class="btn btn-sm" type="button">Vincular voluntário</button></div>
+            </section>
+          </div>
+
+          <div class="tab-panel panel-docs">
+            <section class="card" aria-labelledby="t-docs">
+              <h2 id="t-docs">Documentos</h2>
+              <p>Nenhum documento anexado. Termos de adoção e laudos aparecerão aqui.</p>
+              <div style="margin-top:14px"><button class="btn btn-sm" type="button">Anexar documento</button></div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
